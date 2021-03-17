@@ -1,0 +1,34 @@
+# Return Prime_List ( int size ) 
+def eratos(size):
+	
+	b_Prime =  [False , False]+ [True] * ( size - 2 )
+	i_Prime = []
+	
+	for i in range( size):
+		if b_Prime[i] == True:
+			i_Prime.append(i)
+			for j in range(i * 2 , size , i):
+				b_Prime[j] = False
+	return i_Prime
+
+
+
+i_Prime = eratos(123456 * 2)
+
+while True :
+
+	number = int( input() )
+	count  = 0
+	if number == 0 :
+		 break
+	for i in i_Prime:
+        # Maximum Check
+		if i > number * 2:
+			break
+        # Range Check Count  
+		if number < i and i <= number * 2 :
+			count += 1
+	print(count)
+		
+		
+		

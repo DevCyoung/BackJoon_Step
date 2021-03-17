@@ -1,0 +1,32 @@
+import sys
+
+def primeNum(num):
+    if num != 1:
+        for i in range(2 , num ):
+            if num % i == 0:
+                return False;
+    else :
+        return False
+    return True
+
+maxNum = int(sys.stdin.readline())
+minNum = int(sys.stdin.readline())
+aver   = 0
+first  = 0
+count  = False
+for i in range( maxNum , minNum + 1 ):
+    
+    if primeNum(i):
+        aver += i
+        
+        if count == False:
+            first = i
+            count = True
+         
+if count == False :
+    print(-1)
+else:
+    print( aver  )
+    print( first)
+        
+        

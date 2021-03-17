@@ -1,0 +1,34 @@
+import math
+
+# 나눌수 있는 첫번째 소수를 가져옵니다.
+def firstSosu(number):
+    maxSize = int( math.sqrt(number) ) + 1
+    for i in range(2 , maxSize ):
+        if checkSosu(i) and number % i == 0:
+            return i
+    return 0 
+        
+# number 은 소수인가    
+def checkSosu(number):
+    maxSize = int( math.sqrt(number) ) + 1
+    for i in range(2 ,  maxSize  ):
+        if number % i == 0:
+            return False
+    return True    
+
+
+num = int(input())
+
+while True:
+	if num == 1:
+		break
+	first =  firstSosu( num )
+	if first == 0:
+		print(num)
+		break
+	else :
+		print(first)
+	num /=  int( first )
+	num  =  int(num)
+	
+	

@@ -1,0 +1,5 @@
+x , y , w , h = map( int , input().split() )
+listArr = [ h - y , w - x , y , x]
+print(min(listArr))
+	
+	

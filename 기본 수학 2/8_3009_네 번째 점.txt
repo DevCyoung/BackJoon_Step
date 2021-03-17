@@ -1,0 +1,20 @@
+vecList = [] 
+
+for i in range(3):
+	x , y = map( int , input().split() )
+	vecList.append( (x,y) )
+
+newX = vecList[0][0]
+newY = vecList[0][1]
+
+if newX == vecList[1][0] :
+	newX = vecList[2][0]
+elif	newX == vecList[2][0] :
+	 newX = vecList[1][0]
+
+if newY == vecList[1][1]:
+	newY = vecList[2][1]
+elif newY == vecList[2][1]:
+	newY = vecList[1][1]
+	
+print( newX , newY)

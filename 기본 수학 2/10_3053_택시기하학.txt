@@ -1,0 +1,11 @@
+# taxi giography
+def area(radius):
+	return round( (radius ** 2) * 3.14159265359 , 5 )
+	
+def area2(radius):
+	return round( ( ( (radius ** 2) * 2 ) ** 0.5 ) ** 2 , 5)
+
+radius = int(input())
+
+print( area(radius))
+print( area2(radius)  )
