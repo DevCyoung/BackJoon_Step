@@ -1,0 +1,19 @@
+number  = int( input() )
+l       = len( str(number))
+Min     = 1
+Max     = number + 9 * l
+
+if number - 9 >= 1:
+    Min = number - 9 * l
+    
+output = 0
+
+for i in range( Min, Max +1 ):
+	result    = i
+	activator = i
+	for j in str(i):
+		result += int(j)
+	if result == number:
+		output = activator
+		break   
+print(output)	

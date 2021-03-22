@@ -1,0 +1,17 @@
+size = int( input() )
+listArr = []
+
+for i in range(size):
+	listArr.append( int(input()))
+
+#buble sort
+	
+for i in range( size ):
+	for j in range(  size -1 - i ):
+		if listArr[j] > listArr[j + 1]:
+			temp = listArr[j]
+			listArr[j] = listArr[j + 1]
+			listArr[j+1]  = temp
+for i in listArr:
+	print(i)
+			

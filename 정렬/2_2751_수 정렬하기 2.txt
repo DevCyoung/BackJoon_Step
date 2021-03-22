@@ -1,0 +1,10 @@
+import sys
+size = int(input())
+listArr = []
+for i in range(size):    
+    listArr.append( int( sys.stdin.readline() ) ) 
+
+listArr.sort()
+
+for i in listArr:
+	print(i)

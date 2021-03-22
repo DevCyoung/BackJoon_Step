@@ -1,0 +1,12 @@
+size = int( input() )
+xys = []
+for i in range(size):
+	x , y = map( int , input().split())
+	xys.append( (x,y) )
+
+for i in xys:
+    k = 1
+    for j in xys:
+    	if i[0] < j[0] and i[1] < j[1]:
+    		k += 1
+    print(k , end = " ")		
