@@ -1,0 +1,35 @@
+import sys
+# Goldbach's conjecture
+def eratos(size):
+    b_Prime = [False, False] + [True] * (size - 2)
+    i_Prime = []
+    for i in range(2, size):
+        if b_Prime[i] == True:
+            i_Prime.append(i)
+            for j in range(i + i, size, i):
+                b_Prime[j] = False
+    return i_Prime
+
+def get_gold( prime2 , number ):
+
+    for i in range( len(prime2) - 1, -1, -1):
+        for j in range(i, len(prime2)):
+
+            if prime2[i] + prime2[j] > number:
+                break
+
+            if prime2[i] + prime[j] == number:
+                print(prime2[i] , prime2[j])
+                return
+
+prime = eratos(6000)
+case = int(input())
+
+for i in range(case):
+    num = int( sys.stdin.readline() )
+    get_gold(prime , num)
+
+
+
+
+

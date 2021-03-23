@@ -1,0 +1,38 @@
+import sys
+
+case = int(sys.stdin.readline())
+
+for i in range(case):
+
+    x1 , y1 , r1 ,x2 ,y2, r2 = map( int , sys.stdin.readline().split() )
+    #기준 x1
+
+
+
+    a = ( x2 - x1 ) ** 2
+    b = ( y2 - y1 ) ** 2
+    distance =  ( a + b ) ** 0.5
+
+    result = 0
+
+    rarray = [distance , r1 , r2]
+    maxr   = max(rarray);
+    rarray.remove(maxr)
+    if distance == 0 and r1 == r2:
+        result = -1
+    elif r1 + r2 == distance or  distance + r1 == r2 or distance + r2 == r1:
+        result = 1
+    elif maxr > rarray[0] + rarray[1]:
+        result = 0
+    else:
+        result = 2
+    print(result)
+
+
+
+
+
+
+
+
+
