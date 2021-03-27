@@ -1,0 +1,12 @@
+end   = int( input())
+count = 1
+Range = 1
+
+while True:
+    if Range >= end :
+        break
+    else :
+        Range += 6 * count
+        count += 1
+print(count)        
+    
