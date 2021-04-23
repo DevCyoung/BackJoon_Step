@@ -1,6 +1,7 @@
 
 end   = int( input())
 count = 1
+
 Range = 1
 
 while True:
